@@ -54,20 +54,13 @@ var quotes = [
     source: "images/einstein.jpeg"
   }
 ];
-
-// let pic = `<img id="pic" />`
-
 var num = [];
 function newQuote() {
   var rand = Math.floor(Math.random() * quotes.length);
   num.push(rand);
   var img = document.getElementById("image");
 
-    if (num.length == 1) {
-        document.getElementById("nQuote").innerHTML = `${quotes[rand].quote}`;
-        document.getElementById("author").innerHTML = `${quotes[rand].author}`;
-        img.src= `${quotes[rand].source}`;
-    }else if (num[(num.length - 1)] == num[(num.length - 2)]) {
+  if (num[(num.length - 1)] == num[(num.length - 2)]) {
         rand++;
         document.getElementById("nQuote").innerHTML = `${quotes[rand].quote}`;
         document.getElementById("author").innerHTML = `${quotes[rand].author}`;
@@ -77,7 +70,7 @@ function newQuote() {
         document.getElementById("author").innerHTML = `${quotes[rand].author}`;
         img.src= `${quotes[rand].source}`;
   }
-        console.log(num);
+  console.log(num);
 
 }
 
