@@ -61,7 +61,8 @@ function newQuote() {
   var img = document.getElementById("image");
 
   if (num[(num.length - 1)] == num[(num.length - 2)]) {
-        rand++;
+    rand++;
+    num.push(rand);
         document.getElementById("nQuote").innerHTML = `${quotes[rand].quote}`;
         document.getElementById("author").innerHTML = `${quotes[rand].author}`;
         img.src= `${quotes[rand].source}`;
