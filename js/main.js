@@ -58,9 +58,11 @@ var num = [];
 function newQuote() {
   var rand = Math.floor(Math.random() * quotes.length);
   num.push(rand);
+  console.log(num);
   var img = document.getElementById("image");
 
   if (num[(num.length - 1)] == num[(num.length - 2)]) {
+    num.pop(rand);
     rand++;
     num.push(rand);
         document.getElementById("nQuote").innerHTML = `${quotes[rand].quote}`;
